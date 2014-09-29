@@ -1,9 +1,8 @@
 <h1>Wines</h1>
-<p>Selections available as of:  October 23, 2014</p>
+<p>Selections available as of:  <%= formatted_time(@available_at) %></p>
 <ol>
-  <li>Chardonnay</li>
-  <li>Cuvee Noir</li>
-  <li>Pinot Gris</li>
-  <li>Malbec</li>
-</ol>
+  <% @wines.each do |wine| %>
+  <li><%= wine %></li>
+  <% end %>
+<ol>
 
