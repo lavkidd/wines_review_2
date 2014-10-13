@@ -28,6 +28,11 @@ class WinesController < ApplicationController
     end
   end
 
+  def index
+    @available_at = Time.now
+    @wines = Wine.includes(:reviews).order(:name)
+  end
+
 #def create
 #  	@wine = Wine.new(wine_params)
 #  	@wine.save

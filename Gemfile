@@ -34,6 +34,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Add average and other useful methods
+gem 'powerpack'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

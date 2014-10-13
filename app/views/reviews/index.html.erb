@@ -2,11 +2,13 @@
 
 <ol id="reviews">
   <% @reviews.each do |review| %>
-  	<%= review.stars %> by <%= review.name %>
+  	<%= review.stars %> stars by <%= review.name %>
   	<%= time_ago_in_words(review.created_at) %> ago<br/>
+    <p>
+      &quot;<%= review.comment %>&quot;
+    </p>
   <% end %>
 </ol>
 
 <%= link_to 'Write a Review', new_wine_review_path(@wine) %>
-
 
