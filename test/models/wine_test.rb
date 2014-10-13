@@ -37,13 +37,13 @@ class WineTest < ActiveSupport::TestCase
     	                       winery:   'Colleziione di Paola',
     	                       country:  'Italy'
     	                       varietal: 'Sangiovese')
-    found_wine = Wine.fine created_wine.id
+    found_wine = Wine.find created_wine.id
     assert_not_nil found_wine
     assert_equal 'Colleziione di Paola', found_wine.name
-    assert_equal 2012, found_book.year
+    assert_equal  2012,                  found_wine.year
     assert_equal 'Colleziione di Paola', found_wine.winery
-    assert_equal 'Italy', found_wine.country
-    assert_equal 'Sangiovese', found_wine.varietal
+    assert_equal 'Italy',                found_wine.country
+    assert_equal 'Sangiovese',           found_wine.varietal
   end
 
 end
