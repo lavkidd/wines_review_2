@@ -2,16 +2,11 @@
 
 <ol id="reviews">
   <% @reviews.each do |review| %>
-  <li>
-  	<span class="review"><%= pluralize(review.stars, 'star') %></span
-    <span class="user"> by <%= review.name %></span>
-    <span class="date"><%= time_ago_in_words(review.created_at) %> ago </span>
-    <p>
-      &quot;<%= review.comment %>&quot;
-    </p>
-  </li>
+  	<%= review.stars %> by <%= review.name %>
+  	<%= time_ago_in_words(review.created_at) %> ago<br/>
   <% end %>
 </ol>
 
 <%= link_to 'Write a Review', new_wine_review_path(@wine) %>
+
 
