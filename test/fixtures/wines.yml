@@ -1,15 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  year: 1
-  winery: MyString
-  country: MyString
-  varietal: MyString
+Lakeridge:
+  name:     'Lakeridge'
+  year:      2013
+  winery:   'Lakeridge'
+  country:  'USA'
+  varietal: 'Cuvee Noir'
 
-two:
-  name: MyString
-  year: 1
-  winery: MyString
-  country: MyString
-  varietal: MyString
+AltaTierra:
+  name:     'Alta Tierra'
+  year:      2012
+  winery:   'Titon Vineyard'
+  country:  'Chile'
+  varietal: 'Chardonnay'
+
