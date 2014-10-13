@@ -9,7 +9,6 @@
   <p><label>Winery:  </label> <%= @wine.winery   %></p>
   <p><label>Country: </label> <%= @wine.country  %></p>
   <p><label>Varietal:</label> <%= @wine.varietal %></p>
-
 </article>
 
 <%= link_to 'All Wines', wines_path %>
@@ -19,4 +18,10 @@
 <%= button_to 'Delete', @wine,
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
+
+<p>
+  Read all
+  <%= link_to pluralize(@wine.reviews.size, 'review'),
+                         wine_reviews_path(@wine) %>
+</p>
 
